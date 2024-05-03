@@ -50,7 +50,7 @@ The **Figure 1** shows the artifacts used in this PoC.
 
 **Note:** An Arduino Uno can be substituted, obviating the necessity for In Circuit Programming using the Arduino Nano (or Every).
 
-![Figure 1: Arduino Flashing](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/components.jpg)
+![Figure 1: Arduino Flashing](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/components.jpg)
 
 **Figure 1:** Components used in the breadboard's Arduino assembly.
 
@@ -66,7 +66,7 @@ Performing glitching directly on the Arduino Nano is unfeasible due to capacitor
 
 The Arduino board incorporates numerous stabilizing capacitors and a power regulator, as illustrated in **Figure 2**.
 
-![Figure 2: Arduino Flashing](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/capacitors.jpg)
+![Figure 2: Arduino Flashing](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/capacitors.jpg)
 
 **Figure 2:** Capacitors on the Arduino Nano board.
 
@@ -80,11 +80,11 @@ Alternatively, listed components can be used to construct a new Arduino board on
 
 The schematic depicted in **Figure 3** replaces the conventional Arduino board, and **Figure 4** shows the assembled circuit on the breadboard but still without the LCD connected.
 
-![Figure 3: Arduino Flashing](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/arduino_flashing.PNG)
+![Figure 3: Arduino Flashing](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/arduino_flashing.PNG)
 
 **Figure 3:** Schematics for flashing the Atmega328P on the breadboard.
 
-![Figure 4: Arduino Flashing](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/atmel_stantd_alone.jpeg)
+![Figure 4: Arduino Flashing](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/atmel_stantd_alone.jpeg)
 
 **Figure 4:** Breadboard assembly mimicking an Arduino Uno.
 
@@ -92,11 +92,11 @@ After the project started, it was decided to add an LCD to be easier to provide 
 
 The LCD display is a common display with I2C support, as shown in **Figure 5** and **Figure 6**.
 
-![Figure 5: Arduino Flashing](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/lcd_front.jpg)
+![Figure 5: Arduino Flashing](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/lcd_front.jpg)
 
 **Figure 5:** Front view of the LCD.
 
-![Figure 6: Arduino Flashing](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/lcd_back.jpg)
+![Figure 6: Arduino Flashing](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/lcd_back.jpg)
 
 **Figure 6:** Back view of the LCD.
 
@@ -106,7 +106,7 @@ The firmware is flashed into the breadboard via SPI connection [6] after the con
 
 **Note:** As our intention is to cause instability in the power line supply, no capacitors are inserted in the breadboard. However, if in the future the correct usage is the purpose, it is reasonable to insert at least a capacitor in the power-supply line near the microcontroller as shown in **Figure 7**.
 
-![Figure 7: Arduino Flashing](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/capacitors_01.jpg) 
+![Figure 7: Arduino Flashing](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/capacitors_01.jpg) 
 
 **Figure 7:** Capacitors used in the Arduino to stabilize the power line.
 
@@ -118,7 +118,7 @@ This configuration facilitates flashing the Arduino bootloader onto the Atmega32
 
 To convert the Arduino Nano into an ICSP, upload the "ArduinoISP" sketch as presented in **Figure 8**.
 
-![Figure 8: ICSP Configuration](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/load_arduino_isp.PNG)
+![Figure 8: ICSP Configuration](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/load_arduino_isp.PNG)
 
 **Figure 8:** Loading ISP programmer on the Arduino Nano.
 
@@ -126,11 +126,11 @@ To convert the Arduino Nano into an ICSP, upload the "ArduinoISP" sketch as pres
 
 After all circuits are assembled, it should look like **Figure 10**.
 
-![Figure 9: ICSP Configuration](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/arduino_ISP.jpeg)
+![Figure 9: ICSP Configuration](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/arduino_ISP.jpeg)
 
 **Figure 9:** Connections for Arduino ISP wiring.
 
-![Figure 10: Arduino Flashing](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/picture_with_isp.jpg)
+![Figure 10: Arduino Flashing](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/picture_with_isp.jpg)
 
 **Figure 10:** Complete circuit for flashing the Arduino bootloader and sketch.
 
@@ -138,7 +138,7 @@ After all circuits are assembled, it should look like **Figure 10**.
 
 Upon establishing the requisite connections as discussed previously, the bootloader is flashed onto the Atmega located on the breadboard. Navigate to **Tools -> Burn Bootloader** as depicted in Figure 11.
 
-![Figure 11: Burning Bootloader](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/burn_arduino.png)
+![Figure 11: Burning Bootloader](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/burn_arduino.png)
 
 **Figure 11:** Burn bootloader menu.
 
@@ -146,7 +146,7 @@ Upon successful execution, a confirmation message is displayed.
 
 Occasionally, misleading errors such as the one illustrated below in **Figure 12** may arise, often attributable to connection issues.
 
-![Figure 12: Error Message](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/yieks.PNG)
+![Figure 12: Error Message](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/yieks.PNG)
 
 **Figure 12:** Common connection error.
 
@@ -160,13 +160,13 @@ As the breadboard lacks direct computer connectivity, the firmware is uploaded v
 
 Clone the repository, open **"test.ino"**, configure the board settings as illustrated below in **Figure 13**, designating the breadboard as an Arduino Nano. 
 
-![Figure 13: Board Configuration](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/arduino_ISP_conf.png)
+![Figure 13: Board Configuration](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/arduino_ISP_conf.png)
 
 **Figure 13:** Configuring the board.
 
 Afterwards, select the programmer as **Arduino as ISP** and upload the sketch using the programmer as illustrated in **Figure 14**.
 
-![Figure 14: Test Firmware Upload](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/upload_test.png)
+![Figure 14: Test Firmware Upload](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/upload_test.png)
 
 **Figure 14:** Uploading using the ISP programmer.
 
@@ -180,7 +180,7 @@ The schematic for the glitching hardware is depicted in **Figure 15** and intend
 
 The same technique can be applied to the reset line and can also be exploited.
 
-![Figure 15: Glitching Hardware](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/arduino_glitching.PNG)
+![Figure 15: Glitching Hardware](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/arduino_glitching.PNG)
 
 **Figure 15:** Schematics for glitching.
 
@@ -188,7 +188,7 @@ The same technique can be applied to the reset line and can also be exploited.
 
 Subsequently, upload the **glitching.ino** to the Arduino Nano as customary. The complete circuit assembly is portrayed in **Figure 16**.
 
-![Figure 16: Complete Circuit Assembly](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/complete_circuit.jpeg)
+![Figure 16: Complete Circuit Assembly](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/complete_circuit.jpeg)
 
 **Figure 16:** Complete glitch circuit.
 
@@ -208,13 +208,13 @@ In practical terms, MOSFETs are preferred for applications requiring high-speed 
 
 Note that a resistor is not used between the microcontroller pin the MOSFET since unlike a BJT it is operated based on the voltage and not on the current [4].
 
-![Figure 17: Test Firmware Upload](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/IRL540N_circuit.jpeg)
+![Figure 17: Test Firmware Upload](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/IRL540N_circuit.jpeg)
 
 **Figure 17:** MOSFET assembly.
 
 The hardware environment should look like **Figure 18**.
 
-![Figure 18: Arduino Flashing](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/complete_envirorment.jpeg)
+![Figure 18: Arduino Flashing](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/complete_envirorment.jpeg)
 
 **Figure 18:** Complete glitch environment.
 
@@ -407,19 +407,19 @@ The randomness is introduced once the glitching circuit is never turned off, and
 
 The circuit normally works as shown in **Video 1**.
 
-[![Video 1: Circuit Working Normally](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/communication_freak_youtube_short.PNG)](https://youtube.com/shorts/bZ1MB8XfEco)
+[![Video 1: Circuit Working Normally](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/communication_freak_youtube_short.PNG)](https://youtube.com/shorts/bZ1MB8XfEco)
 
 If the reader is curious, it is also possible to observe the Glitching signal through an oscilloscope as presented in **Video 2**. Most of the time, the hardware will start to behave unusually as shown in **Video 3**.
 
-[![Video 2: Capturing a Glitching Attempt](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/glitching_attempt_freak_youtube_short.PNG)](https://youtu.be/I3Xn_78Hp-U)
+[![Video 2: Capturing a Glitching Attempt](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/glitching_attempt_freak_youtube_short.PNG)](https://youtu.be/I3Xn_78Hp-U)
 
-[![Video 3: Capturing a Glitching Attempt](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/communication_freak_youtube_short.PNG)](https://youtu.be/UySfIcTq-Ns)
+[![Video 3: Capturing a Glitching Attempt](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/communication_freak_youtube_short.PNG)](https://youtu.be/UySfIcTq-Ns)
 
 In the PoC tests, a successful glitching happened after 1 minute, displaying ";)" on the LCD. **Video 4** shows it happening. **Figure 19** captured the exact moment.
 
-[![Video 4: Glitching Happening](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/glitching_happening_youtube_short.PNG)](https://youtube.com/shorts/Eb_dHtrLmSM)
+[![Video 4: Glitching Happening](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/glitching_happening_youtube_short.PNG)](https://youtube.com/shorts/Eb_dHtrLmSM)
 
-![Figure 19: Glitching Happening](https://github.com/lord-feistel/glitching_lab/blob/main/images_videos/glitching_happening_pic.jpg)
+![Figure 19: Glitching Happening](https://github.com/lord-feistel/hardware_hacking_lab/blob/main/images_videos/glitching_happening_pic.jpg)
 
 ## Conclusion
 
